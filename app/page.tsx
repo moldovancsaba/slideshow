@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import styled from 'styled-components';
 
 const Slideshow = dynamic(() => import('../src/components/Slideshow'), {
   loading: () => (
@@ -11,10 +12,44 @@ const Slideshow = dynamic(() => import('../src/components/Slideshow'), {
   ssr: false
 });
 
+const Title = styled.h1`
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  z-index: 40;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: -1px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  white-space: nowrap;
+  mix-blend-mode: difference;
+`;
+
+
 export default function Home() {
   return (
-    <main className="min-h-screen w-screen overflow-hidden bg-black">
-      <Slideshow />
-    </main>
+    <>
+      <main className="fixed inset-0 overflow-hidden bg-[var(--background)]" style={{ height: '100dvh' }}>
+        <Title>WE LOVE ROMA</Title>
+        <Slideshow />
+      </main>
+    </>
   );
 }
