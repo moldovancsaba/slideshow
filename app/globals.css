@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #091232;
+  --background: #000000;
   --text: #FFFFFF;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --blur-bg: rgba(9, 18, 50, 0.8);

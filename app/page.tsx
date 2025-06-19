@@ -29,7 +29,7 @@ const Title = styled.h1`
   transform: translate(-50%, -50%);
   font-size: 72px;
   font-weight: 700;
-  color: var(--text);
+  color: transparent;
   text-align: center;
   z-index: 40;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);

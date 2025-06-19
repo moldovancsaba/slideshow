@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${quicksand.className} antialiased m-0 p-0 bg-[#0F1421]`}
+className={`${quicksand.className} antialiased m-0 p-0 bg-[#000000]`}
       >
         <StyledComponentsRegistry>
           {children}
